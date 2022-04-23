@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Stock{% endblock %} {% block content
+    %}
+    <div class="pt-3">
+      <table class="table table-striped table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Galon 5 Vacio</th>
+            <th scope="col">Galon 11 Vacio</th>
+            <th scope="col">Galon 15 Vacio</th>
+            <th scope="col">Galon 45 Vacio</th>
+            <th scope="col">Galon 5 Lleno</th>
+            <th scope="col">Galon 11 Lleno</th>
+            <th scope="col">Galon 15 Lleno</th>
+            <th scope="col">Galon 45 Lleno</th>
+            <th scope="col">Cantidad Vales</th>
+            <th scope="col">Ganancia</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for inventario in data %}
+          <tr>
+            <td>{{ inventario.galon_5_vacio }}</td>
+            <td>{{ inventario.galon_11_vacio }}</td>
+            <td>{{ inventario.galon_15_vacio }}</td>
+            <td>{{ inventario.galon_45_vacio }}</td>
+            <td>{{ inventario.galon_5_lleno }}</td>
+            <td>{{ inventario.galon_11_lleno }}</td>
+            <td>{{ inventario.galon_15_lleno }}</td>
+            <td>{{ inventario.galon_45_lleno }}</td>
+            <td>{{ inventario.cantidad_vales }}</td>
+            <td>{{ inventario.ganancia }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endblock %}
+    
